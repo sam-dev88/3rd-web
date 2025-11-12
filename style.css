@@ -1,0 +1,397 @@
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 15px 0;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: clamp(20px, 4vw, 34px);
+  font-weight: 700;
+  color: orange;
+  border-radius: 20px;
+}
+nav {
+  display: flex;
+}
+/* Burger styling (hidden on desktop, visible on mobile) */
+.burger {
+  display: none; /* hide on large screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 1001; /* on top of sidebar */
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Burger animation when clicked */
+.burger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -250px; /* hidden off-screen */
+    width: 150px;
+    height: 40%;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 0px 20px 0px;
+    transition: right 0.6s ease-in-out;
+  }
+
+  nav ul.active {
+    right: 0; /* slide in */
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    color: #222 !important;
+    font-weight: bold !important;
+  }
+  nav ul li {
+    border-radius: 10px;
+    border: 2px solid orange;
+    width: 70%;
+    padding-left: 1rem;
+    background: rgba(233, 150, 7, 0.2); /* semi-transparent white */
+    backdrop-filter: blur(70px); /* blur the background behind */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+  }
+  nav ul li:hover {
+    background: #fff;
+  }
+  nav {
+    padding: 5px;
+  }
+  /* Show burger */
+  .burger {
+    display: flex;
+    width: 2.5rem;
+    height: 2rem;
+    border: 1px solid orange;
+    padding: 7px;
+    border-radius: 4px;
+  }
+  .burger:hover{
+    background: rgb(97, 66, 4);
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f5b041;
+}
+
+section {
+  padding: 100px 5px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Home Section ---------- */
+#home {
+  background-color: #fff;
+  color: orange;
+}
+
+#home img {
+  background-color: orange;
+}
+#about img {
+  background-color: #fff;
+}
+#home img,
+#about img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-bottom: 3rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.floating-img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#home .span-name {
+  font-size: clamp(18px, 3.5vw, 44px);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#home .span2 {
+  font-size: clamp(14px, 2vw, 30px);
+  color: green;
+  font-weight: 600;
+}
+#home h1 {
+  font-size: clamp(14px, 2.5vw, 44px);
+}
+
+#home p {
+  font-size: clamp(12px, 2vw, 24px);
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-size: clamp(14px, 1.5vw, 24px);
+  padding: 2px 20px;
+  background: #222;
+  color: #f39c12;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+  transition: color 1s ease-in-out;
+  z-index: 1;
+}
+/* Create a pseudo-element for the sliding effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: green;
+  z-index: 1;
+  transition: height 0.6s ease-in-out;
+}
+
+.btn:hover::before {
+  height: 100%;
+}
+
+.btn:hover {
+  color: #fff;
+  color: orange;
+  z-index: 3;
+}
+/* Create a pseudo-element for the sliding effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: green;
+  z-index: 1;
+  transition: height 0.6s ease-in-out;
+}
+
+.btn:hover::before {
+  height: 100%;
+}
+
+.btn:hover {
+  color: #fff;
+  color: orange;
+  z-index: 3;
+}
+.btn .download-span {
+  position: relative;
+  z-index: 2; /* text stays visible above the white overlay */
+}
+.container {
+  box-shadow: 5px 5px 5px black;
+  border: 2px solid orange;
+  padding: 1rem;
+  display: flex;
+  width: 90%;
+  height: 80vh;
+}
+aside {
+  align-items: center;
+
+  flex: 40%;
+}
+aside,
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+article {
+  padding: 2rem;
+
+  flex: 60%;
+}
+article p {
+  font-size: clamp(14px, 1.5vw, 24px);
+}
+/* ---------- About Section ---------- */
+#about {
+  background: linear-gradient(135deg, #f5b041, #f39c12);
+  background-color: #fff;
+  text-align: center;
+  color: #fff;
+}
+#about .container {
+  border: 2px solid #fff;
+}
+
+#about h2 {
+  margin-bottom: 20px;
+}
+
+#about p {
+  max-width: 700px;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  box-shadow: 0px 0px 10px black;
+  color: black;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.6);
+  color: #f5be06;
+}
+
+/* ---------- Projects Section ---------- */
+#projects {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+#projects h2 {
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+.project-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  max-width: 300px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ---------- Contact Section ---------- */
+#contact {
+  background-color: #fff;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
