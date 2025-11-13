@@ -11,7 +11,7 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
-#toggle-btn{
+#toggle-btn {
   padding: 5px 5px;
   margin-left: 1rem;
   align-items: center;
@@ -25,11 +25,9 @@ body {
   transition: background-color 0.3s;
 }
 body.dark-mode #toggle-btn {
-  background-color: #f5f5f5;
+  background-color: gray;
   color: #333;
 }
-
-
 
 /* Dark Mode */
 body.dark-mode {
@@ -41,33 +39,35 @@ body.dark-mode #about,
 body.dark-mode #projects,
 body.dark-mode #contact {
   background-color: #1e1e1e; /* dark background for sections */
-  color: #f5f5f5;           /* light text */
+  color: #f5f5f5; /* light text */
 }
-body.dark-mode #home aside .btn{
+body.dark-mode #home aside .btn {
   background-color: #fff;
-} 
+}
 body.dark-mode #about {
   background: #1e1e1e; /* dark background instead of gradient */
-  color: #f5f5f5;   
-    /* text color */
+  color: #f5f5f5;
+  /* text color */
 }
-body.dark-mode #about .social-icons a{
+body.dark-mode #about .social-icons a {
   color: #f39c12;
   box-shadow: 0px 0px 10px orange;
-  
 }
-body.dark-mode #about .social-icons a:hover{
+body.dark-mode #about .social-icons a:hover {
   color: green;
   box-shadow: 0px 0px 10px green;
 }
 
-body, section, header, footer, nav {
+body,
+section,
+header,
+footer,
+nav {
   transition: background-color 0.3s, color 0.3s;
 }
 
-
 header {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   align-items: center;
   display: flex;
   position: fixed;
@@ -82,7 +82,7 @@ header {
   font-size: clamp(20px, 2vw, 30px);
   font-weight: 800;
   color: #fff;
-  background: linear-gradient( orange, #222, #222);
+  background: linear-gradient(orange, #222, #222);
   padding: 0 10px;
   border-radius: 10px;
   box-shadow: 0px 3px 5px;
@@ -124,10 +124,10 @@ nav {
 }
 
 @media (max-width: 768px) {
-  body.dark-mode nav ul li a{
+  body.dark-mode nav ul li a {
     color: #fff !important;
   }
-  body.dark-mode nav ul li a:hover{
+  body.dark-mode nav ul li a:hover {
     color: black !important;
   }
   nav ul {
@@ -196,12 +196,12 @@ nav ul li {
   padding: 4px 13px;
   margin: 0 20px;
   border-radius: 10px;
-  transition: transform 0.6s ease-in-out ;
+  transition: transform 0.6s ease-in-out;
 }
-nav ul li:hover{
-box-shadow: 0px 0px 5px green;
-transform: scale(1.1);
-border: none;
+nav ul li:hover {
+  box-shadow: 0px 0px 5px green;
+  transform: scale(1.1);
+  border: none;
 }
 
 nav ul li a {
@@ -406,7 +406,7 @@ article p {
   color: green; /* optional: change color on hover */
   box-shadow: 0px 0px 10px green;
 }
-article .expertise{
+article .expertise {
   font-weight: bold;
 }
 
