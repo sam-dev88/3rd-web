@@ -1,3 +1,19 @@
+const toggleBtn = document.getElementById('toggle-btn');
+const body = document.body;
+const icon = document.getElementById('icon');
+
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    icon.textContent = "🌙"; // moon in dark mode
+  } else {
+    icon.textContent = "🌞"; // sun in light mode
+  }
+});
+
+
+
 const burger = document.getElementById('burger');
 const navLinks = document.getElementById('navLinks'); // your sidebar menu
 
