@@ -24,7 +24,7 @@ header {
   z-index: 1000;
 }
 .logo {
-  font-size: clamp(20px, 4vw, 34px);
+  font-size: clamp(24px, 4vw, 34px);
   font-weight: 700;
   color: orange;
   border-radius: 20px;
@@ -193,18 +193,16 @@ section {
 }
 
 #home .span-name {
-  font-size: clamp(18px, 3.5vw, 44px);
+  font-size: clamp(20px, 3.5vw, 44px);
   font-weight: 700;
   margin-bottom: 10px;
 }
 #home .span2 {
-  font-size: clamp(14px, 2vw, 30px);
+  font-size: clamp(16px, 2vw, 30px);
   color: green;
-  font-weight: 600;
+  font-weight: 700;
 }
-#home h1 {
-  font-size: clamp(14px, 2.5vw, 44px);
-}
+
 
 #home p {
   font-size: clamp(12px, 2vw, 24px);
@@ -216,7 +214,7 @@ section {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  font-size: clamp(14px, 1.5vw, 24px);
+  font-size: clamp(20px, 1.5vw, 24px);
   padding: 2px 20px;
   background: #222;
   color: #f39c12;
@@ -295,12 +293,16 @@ article {
   justify-content: center;
 }
 article {
-  padding: 2rem;
+  padding: 1rem;
 
   flex: 60%;
 }
+article h1{
+  font-size: clamp(16px, 2vw, 30px);
+}
 article p {
   font-size: clamp(14px, 1.5vw, 24px);
+ 
 }
 /* ---------- About Section ---------- */
 #about {
