@@ -420,9 +420,8 @@ article .expertise {
   text-align: center;
 }
 
-.project-box {
+.project-box, .project-box2 {
   display: flex;
-  background-image: url(photos/mock-up.png);
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -434,16 +433,24 @@ article .expertise {
   height: 60vh;
   transition: transform 0.6s ease-in-out;
 }
-
-.project-box:hover {
+.project-box{
+  background-image: url(photos/mock-up.png);
+}
+.project-box2{
+  background-image: url(photos/3rd-web-project.png);
+}
+.project-box:hover{
   transform: translateY(-5px) scale(1.1);
 }
+.project-box2:hover{
+  transform: translateY(-5px) scale(1.1);
+} 
 
 .project-container {
   gap: 1rem;
   padding: 0 4rem;
   display: flex;
-  flex-direction: row;
+ 
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -516,8 +523,17 @@ footer {
   .project-container h2{
     text-align: center;
   }
-  .project-box {
-    width: 100%;
+  .project-box{
+    margin-top: 0;
+  }
+  .project-box,.project-box2 {
+    width: 85%;
     height: 30vh;
+  }
+  .project-box2{
+    background-image: url(photos/mobile-project.png);
+  }
+  .view-btn{
+    display: none;
   }
 }
