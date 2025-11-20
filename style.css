@@ -419,8 +419,19 @@ article .expertise {
   background-color: #f4f4f4;
   text-align: center;
 }
+.project-box a,
+.project-box2 a {
+  text-align: center;
+  margin: 2% auto;
+  color: green;
+}
+.project-box a:hover,
+.project-box2 a:hover {
+  color: #1e1e1e;
+}
 
-.project-box, .project-box2 {
+.project-box,
+.project-box2 {
   display: flex;
   background-size: cover;
   background-position: center;
@@ -433,18 +444,15 @@ article .expertise {
   height: 60vh;
   transition: transform 0.6s ease-in-out;
 }
-.project-box{
+.project-box {
   background-image: url(photos/mock-up.png);
 }
-.project-box2{
+.project-box2 {
   background-image: url(photos/3rd-web-project.png);
 }
-.project-box:hover{
-  transform: translateY(-5px) scale(1.1);
+.project-box:hover,.project-box2:hover {
+  transform: translateY(-15px) scale(1.1);
 }
-.project-box2:hover{
-  transform: translateY(-5px) scale(1.1);
-} 
 
 .project-container {
   gap: 1rem;
@@ -519,20 +527,21 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .project-container h2{
+  .project-container h2 {
     text-align: center;
   }
-  .project-box{
+  .project-box {
     margin-top: 0;
   }
-  .project-box,.project-box2 {
+  .project-box,
+  .project-box2 {
     width: 85%;
     height: 30vh;
   }
-  .project-box2{
+  .project-box2 {
     background-image: url(photos/mobile-project.png);
   }
-  .view-btn{
+  .view-btn {
     display: none;
   }
 }
