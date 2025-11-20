@@ -442,7 +442,7 @@ body.dark-mode #projects .project-box,body.dark-mode #projects .project-box2 {
   padding: 10px;
   box-shadow: 4px 5px 5px black;
   border-radius: 10px;
-  margin: 1% auto;
+  margin: 1rem;
   width: 40%;
   height: 60vh;
   transition: transform 0.6s ease-in-out;
@@ -454,7 +454,7 @@ body.dark-mode #projects .project-box,body.dark-mode #projects .project-box2 {
   background-image: url(photos/3rd-web-project.png);
 }
 .project-box:hover,.project-box2:hover {
-  transform: translateY(-15px);
+  transform: translateY(-10px);
 }
 
 .project-container {
@@ -538,11 +538,9 @@ footer {
   }
   .project-box,
   .project-box2 {
-    width: 80%;
+    margin: 0 auto;
+    width: 90%;
     height: 30vh;
-  }
-  .project-box2 {
-    background-image: url(photos/mobile-project.png);
   }
   .view-btn {
     display: none;
