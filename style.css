@@ -421,6 +421,8 @@ article .expertise {
 }
 .project-box a,
 .project-box2 a {
+  font-size: clamp(12px, 1.2vw, 24px);
+  font-weight: bold;
   text-align: center;
   margin: 2% auto;
   color: green;
@@ -429,16 +431,17 @@ article .expertise {
 .project-box2 a:hover {
   color: #1e1e1e;
 }
-
+body.dark-mode #projects .project-box,body.dark-mode #projects .project-box2 {
+  box-shadow: 4px 5px 5px orange;
+}
 .project-box,
 .project-box2 {
   display: flex;
   background-size: cover;
   background-position: center;
-  padding: 20px;
-  box-shadow: 0px 0px 30px rgb(181, 71, 71);
+  padding: 10px;
+  box-shadow: 4px 5px 5px black;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 1% auto;
   width: 40%;
   height: 60vh;
@@ -451,7 +454,7 @@ article .expertise {
   background-image: url(photos/3rd-web-project.png);
 }
 .project-box:hover,.project-box2:hover {
-  transform: translateY(-15px) scale(1.1);
+  transform: translateY(-15px);
 }
 
 .project-container {
@@ -535,7 +538,7 @@ footer {
   }
   .project-box,
   .project-box2 {
-    width: 85%;
+    width: 80%;
     height: 30vh;
   }
   .project-box2 {
