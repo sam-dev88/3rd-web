@@ -450,25 +450,27 @@ article .expertise {
 }
 .project-box a,
 .project-box2 a {
-  color: green;
-  font-size: clamp(12px, 1vw, 24px);
+  color: #fff;
+  font-size: clamp(14px, 1vw, 24px);
   font-weight: bold;
 }
 .project-box a:hover,
 .project-box2 a:hover {
-  color: black;
+  color: #ffbd59;
 }
 
 @media (max-width: 768px) {
   .project-box,
   .project-box2 {
-    width: 90%; /* full width on small screens */
+    width: 100%; /* full width on small screens */
     height: 200px;
   }
   .project-box a,
   .project-box2 a {
     padding-left: 40%;
+
   }
+  
 }
 
 /* ---------- Contact Section ---------- */
