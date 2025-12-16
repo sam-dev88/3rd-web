@@ -426,6 +426,9 @@ article .expertise {
   border: 2px solid;
   box-shadow: 3px 2px 0px orange;
 }
+.project-container{
+  background-image: url(photos/s2.png);
+}
 
 .project-box,
 .project-box2 {
@@ -658,5 +661,8 @@ footer {
   }
   .contact-info p a {
     font-size: 14px;
+  }
+  .project-container{
+    background-image: url(photos/2.png);
   }
 }
