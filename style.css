@@ -626,6 +626,7 @@ footer {
   .project-container {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
   .project-container h2 {
     text-align: center;
