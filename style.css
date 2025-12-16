@@ -81,11 +81,12 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   width: 100%;
 }
-nav .logo{
+nav .logo img{
 box-shadow: -1px 1px 2px white;
+padding: 0;
 }
 /* Burger styling (hidden on desktop, visible on mobile) */
 .burger {
@@ -425,9 +426,10 @@ article .expertise {
   height: auto; /* IMPORTANT FIX */
   border: 2px solid;
   box-shadow: 3px 2px 0px orange;
+
 }
 .project-container{
-  background-image: url(photos/s2.png);
+  background-color: lightslategray;
 }
 
 .project-box,
@@ -439,12 +441,18 @@ article .expertise {
   border-radius: 10px;
   box-shadow: 4px 5px 5px black;
   transition: transform 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background: orange;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 0.5rem 1rem;
+  color: #111;
 }
-.project-box {
-  background-image: url(photos/dental-website.png);
-}
-.project-box2 {
-  background-image: url(photos/funnel-web.png);
+.project-box img, .project-box2 img{
+  width: 300px;
+ margin-top: .5rem;
+ margin-bottom: .5rem;
 }
 
 .project-box:hover,
@@ -453,13 +461,13 @@ article .expertise {
 }
 .project-box a,
 .project-box2 a {
-  color: #fff;
+  color: green;
   font-size: clamp(14px, 1vw, 24px);
   font-weight: bold;
 }
 .project-box a:hover,
 .project-box2 a:hover {
-  color: #ffbd59;
+  color: black;
 }
 
 @media (max-width: 768px) {
@@ -473,6 +481,13 @@ article .expertise {
     padding-left: 40%;
 
   }
+  .project-box img, .project-box2 img{
+    width: 250px;
+   margin-top: .5rem;
+   margin-bottom: .5rem;
+   line-height: 1;
+  }
+  
   
 }
 
@@ -600,8 +615,8 @@ footer {
   .project-container {
     display: flex;
     flex-direction: column;
-    text-align: justify;
-    padding: 1rem;
+    text-align: center;
+    padding: .5rem;
   }
   #home img,
   #about img {
@@ -615,18 +630,20 @@ footer {
   .project-container h2 {
     text-align: center;
   }
-  .project-box {
-    margin-top: 0;
-  }
+ 
   .project-box,
   .project-box2 {
     margin: 0 auto;
     width: 80%;
-    height: 30vh;
+    height: auto;
   }
   .project-box:hover,
   .project-box2:hover {
-    transform: translateY(-10px) scale(1.1);
+    transform:  scale(1.1);
+  }
+  .project-box a,
+  .project-box2 a{
+    margin-right: 24%;
   }
   .view-btn {
     display: none;
@@ -662,7 +679,5 @@ footer {
   .contact-info p a {
     font-size: 14px;
   }
-  .project-container{
-    background-image: url(photos/2.png);
-  }
+
 }
