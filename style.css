@@ -13,9 +13,9 @@ body {
 }
 #toggle-btn {
   padding: 5px 5px;
-  margin-left: 1rem;
+  margin-right: 1rem;
   align-items: center;
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: clamp(13px, 1vw, 24px);
   cursor: pointer;
   border: none;
   border-radius: 5px;
@@ -79,14 +79,17 @@ header {
   z-index: 1000;
 }
 
-nav {
+header nav {
   display: flex;
-  justify-content:space-between;
+  align-items: center;
   width: 100%;
+  margin-left: 1rem;
 }
 nav .logo img{
 box-shadow: -1px 1px 2px white;
 padding: 0;
+margin-left: 1rem;
+
 }
 /* Burger styling (hidden on desktop, visible on mobile) */
 .burger {
@@ -159,8 +162,9 @@ padding: 0;
   nav ul li:hover {
     background: #fff;
   }
-  nav {
-    padding: 5px;
+  header nav {
+    padding: 0;
+    margin: 0 10px;
   }
   /* Show burger */
   .burger {
@@ -177,8 +181,10 @@ padding: 0;
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 nav ul {
